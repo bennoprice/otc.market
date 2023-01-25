@@ -1,0 +1,174 @@
+
+[
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+         }
+      ],
+      "name": "Cancelled",
+      "type": "event"
+   },
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+         },
+         {
+            "components": [
+               {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+               },
+               {
+                  "internalType": "contract IERC20",
+                  "name": "tokenA",
+                  "type": "address"
+               },
+               {
+                  "internalType": "contract IERC20",
+                  "name": "tokenB",
+                  "type": "address"
+               },
+               {
+                  "internalType": "uint256",
+                  "name": "amountA",
+                  "type": "uint256"
+               },
+               {
+                  "internalType": "uint256",
+                  "name": "amountB",
+                  "type": "uint256"
+               }
+            ],
+            "indexed": false,
+            "internalType": "struct Market.Offer",
+            "name": "offer",
+            "type": "tuple"
+         }
+      ],
+      "name": "Created",
+      "type": "event"
+   },
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+         },
+         {
+            "indexed": false,
+            "internalType": "address",
+            "name": "taker",
+            "type": "address"
+         }
+      ],
+      "name": "Taken",
+      "type": "event"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+         }
+      ],
+      "name": "cancel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "contract IERC20",
+            "name": "tokenA",
+            "type": "address"
+         },
+         {
+            "internalType": "contract IERC20",
+            "name": "tokenB",
+            "type": "address"
+         },
+         {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+         },
+         {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+         }
+      ],
+      "name": "create",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "name": "offers",
+      "outputs": [
+         {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+         },
+         {
+            "internalType": "contract IERC20",
+            "name": "tokenA",
+            "type": "address"
+         },
+         {
+            "internalType": "contract IERC20",
+            "name": "tokenB",
+            "type": "address"
+         },
+         {
+            "internalType": "uint256",
+            "name": "amountA",
+            "type": "uint256"
+         },
+         {
+            "internalType": "uint256",
+            "name": "amountB",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+         }
+      ],
+      "name": "take",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   }
+]

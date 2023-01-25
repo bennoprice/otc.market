@@ -1,0 +1,31 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Market
+    network: goerli
+    source:
+      address: '0x3a1675cF64C33D557dD0f13B8871B1A3cD264ED8'
+      abi: Market
+      startBlock: 8375401
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Offer
+        - Token
+      abis:
+        - name: Market
+          file: ../contracts/abi/Market.json
+        - name: ERC20
+          file: ../contracts/abi/ERC20.json
+      eventHandlers:
+        - event: Created(indexed uint256,(address,address,address,uint256,uint256))
+          handler: handleCreated
+        - event: Taken(indexed uint256,address)
+          handler: handleTaken
+        - event: Cancelled(indexed uint256)
+          handler: handleCancelled
+      file: ./mapping.ts

@@ -1,0 +1,11 @@
+div.heading {
+   padding: 0.7em 0;
+}
+
+div.heading h2 {
+   font-weight: normal;
+}
+
+div.heading span.title {
+   margin: 0 0.3em;
+}

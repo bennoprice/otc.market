@@ -1,0 +1,14 @@
+header {
+   flex: 0 1 auto;
+   background-color: #272927;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 0 3px 0 black;
+	padding: 0 0.5em;
+}
+
+header li {
+   display: inline-block;
+	padding: 0.9em 0.4em;
+}

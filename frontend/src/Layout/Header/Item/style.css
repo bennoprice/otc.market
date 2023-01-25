@@ -1,0 +1,24 @@
+header li a:not(.active) {
+   color: #ebebeb;
+}
+
+header li span.prefix {
+   margin-right: 0.1em;
+   color: #555555;
+}
+
+header li a:after {
+   content: "_";
+   opacity: 0;
+}
+
+header li a.active:after {
+   opacity: 100%;
+   animation: caret 0.9s steps(1) infinite;
+}
+
+@keyframes caret {
+   50% {
+      opacity: 0;
+   }
+}

@@ -1,0 +1,28 @@
+enum OfferState {
+   Open
+   Taken
+   Cancelled
+}
+
+type Offer @entity {
+   id: Bytes!
+   state: OfferState!
+
+   owner: Bytes!
+   taker: Bytes
+
+   createdTimeStamp: BigInt!
+   closedTimeStamp: BigInt
+
+   tokenA: Token!
+   tokenB: Token!
+   amountA: BigInt!
+   amountB: BigInt!
+}
+
+type Token @entity(immutable: true) {
+   id: Bytes!
+   name: String!
+   symbol: String!
+   decimals: Int!
+}

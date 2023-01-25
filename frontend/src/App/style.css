@@ -1,0 +1,16 @@
+.App {
+   font-family: monospace;
+   font-size: 1.25em;
+   min-height: 100vh;
+   color: #ebebeb;
+   display: flex;
+   flex-flow: column;
+}
+
+body {
+   background-color: #191a19
+}
+
+a, .highlight {
+   color: #60cc4a;
+}

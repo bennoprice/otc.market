@@ -1,0 +1,9 @@
+{
+  "name": "subgraph",
+  "version": ".1.0",
+  "license": "ISC",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.37.7",
+    "@graphprotocol/graph-ts": "0.29.1"
+  }
+}
